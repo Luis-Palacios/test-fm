@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TestFm.Library;
 
 namespace TestFm.WebApp.Controllers
 {
@@ -12,7 +13,8 @@ namespace TestFm.WebApp.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            var data = new Data();
+            return data.GetData();
         }
 
         // GET api/values/5
