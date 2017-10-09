@@ -14,7 +14,8 @@ namespace TestFm.WebApp.Controllers
         public IEnumerable<string> Get()
         {
             var data = new Data();
-            return data.GetData();
+            var testData = data.GetData();
+            return testData;
         }
 
         // GET api/values/5

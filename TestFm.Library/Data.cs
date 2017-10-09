@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TestFm.Library
 {
@@ -8,10 +9,8 @@ namespace TestFm.Library
     {
         public IEnumerable<string> GetData()
         {
-            return new List<string>
-            {
-                "foo", "bar"
-            };
+            var context = new TestContext();
+            return context.Humans.Select(h => h.Name).ToList();
         }
     }
 }
